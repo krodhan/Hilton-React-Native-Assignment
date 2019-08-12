@@ -1,0 +1,86 @@
+{
+  "name": "Hilton",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "restart": "rm -rf ios/build/; kill $(lsof -t -i:8081); react-native run-ios",
+    "test": "jest",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "apollo-boost": "^0.1.27",
+    "formik": "^1.5.0",
+    "graphql": "^14.1.1",
+    "prop-types": "^15.7.2",
+    "react": "16.6.3",
+    "react-apollo": "^2.4.1",
+    "react-native": "0.58.4",
+    "react-native-formik": "^1.7.4",
+    "react-native-gesture-handler": "^1.0.15",
+    "react-native-material-textfield": "^0.12.0",
+    "react-navigation": "^3.2.1",
+    "waait": "^1.0.4",
+    "yup": "^0.26.10"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.17",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/faker": "^4.1.5",
+    "@types/jest": "^24.0.0",
+    "@types/react": "^16.8.4",
+    "@types/react-native": "^0.57.35",
+    "@types/react-native-elements": "^0.18.0",
+    "@types/react-native-material-textfield": "^0.12.2",
+    "@types/react-navigation": "^3.0.1",
+    "@types/react-test-renderer": "^16.8.0",
+    "@types/rosie": "^0.0.36",
+    "@types/yup": "^0.26.9",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5",
+    "faker": "^4.1.0",
+    "jest": "24.1.0",
+    "jsdom": "^13.2.0",
+    "jsdom-global": "^3.0.2",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-dom": "^16.8.1",
+    "react-native-testing-library": "^1.5.0",
+    "react-test-renderer": "16.6.3",
+    "rosie": "^2.0.1",
+    "ts-jest": ">=22.0.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!static-container)/"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.jest.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "setupFiles": [
+      "./tests/setup.ts"
+    ],
+    "testEnvironment": "jsdom"
+  }
+}
