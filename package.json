@@ -44,7 +44,7 @@
     "enzyme-to-json": "^3.3.5",
     "faker": "^4.1.0",
     "jest": "24.1.0",
-    "jsdom": "^13.2.0",
+    "jsdom": "^16.5.0",
     "jsdom-global": "^3.0.2",
     "metro-react-native-babel-preset": "0.51.1",
     "react-dom": "^16.8.1",
